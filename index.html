@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cost</title>
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.css" rel="stylesheet">
+	<link href="https://rawgit.com/M-O-Z-G/ion.rangeSlider/global/css/ion.rangeSlider.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js">
+	</script>
+</head>
+<style>
+   .btn-outline-light:hover{
+    color: black !important;
+}
+.height{
+	height: 140px !important;
+}
+
+.irs-single{
+	font-size: 15px;
+}
+
+#pp-nav{
+    margin: 0 auto !important;
+    text-align: center;
+    left:0;
+    right: 0;
+    top: auto !important;
+    bottom: 17px;
+    display: inline-block;
+}
+#pp-nav li, .pp-slidesNav li{
+    display:inline-block;
+}
+h3{
+	font-weight: lighter !important;
+    color: #64b5f6 !important;
+}
+h4{
+    font-weight: lighter !important;
+}
+hr{
+	width: 20% !important;
+	margin: 15px auto !important;
+	height: 2px !important;
+	background-color: #64b5f6 !important;
+}
+.color-2 .irs-bar,
+.color-2 .irs-bar-edge,
+.color-2 .irs-single {
+    background: #64b5f6;
+
+}
+.color-2 .irs-slider {
+    color: #64b5f6;
+
+}
+.irs-slider {
+    width: 15px;
+    height: 18px;
+    top: 22px;
+    background-position: 0 -120px;
+    border: 1px solid #2196f3 ;
+    background: #fff;
+}
+
+.irs-single::after{
+    border-top-color: #64b5f6 !important;
+    margin-left: 2px;
+}
+.check
+{
+    opacity:0.4;
+	
+}
+
+.white{
+	color: white;
+}
+
+.hs-form-required{
+    visibility: hidden !important;
+}
+.hs-input{
+	width: 320px !important;
+	margin-top: 0px !important;
+	border: 2px solid #eeeeee !important;
+}
+.hs-button{
+	margin-top: 10px !important;
+	background-color: white !important;
+	border: 1px solid #2196f3  !important;
+	color: #2196f3 !important;
+	border-radius: 5px !important;
+	width: 100px !important;
+	height: 40px !important; 
+}
+.hs-button:hover{
+	background-color: #2196f3 !important;
+	color: white !important;
+}
+.hs_email{
+	margin-top: 20px !important;
+}
+</style>
+<body style="background-color:white">
+	<div id="pagepiling">
+		<!-- Top Brand -->
+		<div class="container">
+			<a href="http://www.bothook.com"><img class="img-fluid float-left d-none d-sm-block" height="100" src="assets/images/bothook.png" width="100"></a>
+			<h3 class="text-center">Chatbot Cost Calculator</h3>
+		</div>
+		<!-- Landing Page -->
+		<div class="section" style="background-color:#2196f3; margin-top: -38px">
+			<div class="container" style="margin-top: 0px">
+				<div class="row">
+					<div class="col-md-6 col-12" style="margin-top: 50px">
+						<h1 class="text-uppercase white">ChatBot Calculator</h1>
+						<h4 class="text-uppercase white">The Tagline of this awesome site</h4>
+					</div><br>
+					<div class="col-md-6 col-12"><img class="img-fluid d-none d-sm-block" src="assets/images/bot.png"></div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-4 float-right">
+						<p class="white lead">Designed And Developed At <a class="white" href="http://www.bothook.com"><u>Bothook.</u></a></p>
+					</div>
+					<div class="col-md-4 col-4 text-center">
+						<a href="#page1"><button class="btn btn-lg btn-outline-light">Start</button></a>
+					</div>
+				</div><br>
+				<!-- <nav class="navbar fixed-bottom navbar-light bg-faded">
+					<div class="row float-left">
+						
+					</div>
+				</nav> -->
+			</div>
+		</div>
+		<!-- First Section -->
+		<div class="section sec-1" data-anchor="page1" style="background-color:white;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-12">
+						<a href="#page2"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12 col-sm-12 text-center">
+						<h1>Choose the platforms</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-4 col-4">
+						<img class="img-fluid" id="mesPic" src="assets/images/mes-inactive.png" onclick="swapImage('mesPic','assets/images/mes-inactive.png','assets/images/mes-active.png')">
+
+					</div>
+					<div class="col-md-4 col-4">
+						<img class="img-fluid" id="skypePic" src="assets/images/sky-inactive.png" onclick="swapImage('skypePic','assets/images/sky-inactive.png','assets/images/sky-active.png')" >
+					</div>
+					<div class="col-md-4 col-4">
+						<img class="img-fluid" id="telPic" src="assets/images/tel-inactive.png" onclick="swapImage('telPic','assets/images/tel-inactive.png','assets/images/tel-active.png')"></div>
+				</div><br>
+				<br>
+				<div class="row text-center">
+					<div class="col-md-4 col-4">
+						<img class="img-fluid" src="assets/images/wechat.png"></div>
+					<div class="col-md-4 col-4">
+						<img class="img-fluid" id="slackPic" src="assets/images/slack-inactive.png" onclick="swapImage('slackPic','assets/images/slack-inactive.png','assets/images/slack-active.png')"></div>
+					<div class="col-md-4 col-4">
+						<img class="img-fluid" id="alexaPic" src="assets/images/alexa-inactive.png" onclick="swapImage('alexaPic','assets/images/alexa-inactive.png','assets/images/alexa-active.png')"></div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-12 col-12">
+						<p class="lead">1/10</p>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Second Section -->
+		<div class="section sec-2" data-anchor="page2" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page1"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page3"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>Choose Bot Builder</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="row text-center">
+					<div class="col-md-4 col-12">
+						<a href="#page3"><button class="btn btn-outline-primary btn-md">Custom Built</button></a>
+					</div><br>
+					<div class="col-md-4 col-12">
+						<a href="#page3"><img class="img-check" height="auto" src="assets/images/chatfuel.png" width="100"></a>
+						</div>
+							<br>
+					<div class="col-md-4 col-12">
+						<a href="#page3"><img class="img-check" height="auto" src="assets/images/manychat.png" width="150"></a></div><br>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">2/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: -10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Third Section -->
+		<div class="section sec-3" data-anchor="page3" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page2"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page4"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>Do you want integration in your bot?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-4 col-6">
+							<a href="#page4"><button class="btn btn-outline-primary btn-lg">Yes</button></a>
+						</div>
+						<div class="col-md-4 col-6">
+							<a href="#page4"><button class="btn btn-outline-primary btn-lg">No</button></a>
+						</div>
+						<div class="col-md-4 d-none d-sm-block"><img class="img-fluid" src="assets/images/chatbot.png"></div>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">3/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Fourth Section -->
+		<div class="section sec-4" data-anchor="page4" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page3"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page5"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>Do you want users to login from chatbot?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-4 col-6">
+							<a href="#page5"><button class="btn btn-outline-primary btn-lg">Yes</button></a>
+						</div>
+						<div class="col-md-4 col-6">
+							<a href="#page5"><button class="btn btn-outline-primary btn-lg">No</button></a>
+						</div>
+						<div class="col-md-4 d-none d-sm-block"><img class="img-fluid" src="assets/images/chatbot.png"></div>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">4/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Fifth Section -->
+		<div class="section sec-5" data-anchor="page5" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page4"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page6"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>Will you be using database?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-4 col-6">
+							<a href="#page6"><button class="btn btn-outline-primary btn-lg">Yes</button></a>
+						</div>
+						<div class="col-md-4 col-6">
+							<a href="#page6"><button class="btn btn-outline-primary btn-lg">No</button></a>
+						</div>
+						<div class="col-md-4 d-none d-sm-block"><img class="img-fluid" src="assets/images/chatbot.png"></div>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">5/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Sixth Section -->
+		<div class="section sec-6" data-anchor="page6" style="background-color:white">
+			<div class="container" style="margin-top: -50px">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page5"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page7"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>What's the level of dashboard do you want?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="col-md-12 col-xs-6 color-2">
+					<input id="range_08" type="text">
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">6/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Seventh Section -->
+		<div class="section sec-7" data-anchor="page7" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page6"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page8"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>What kind of bot?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-4 col-6">
+							<a href="#page8"><button class="btn btn-outline-primary btn-lg">Voice</button></a>
+						</div>
+						<div class="col-md-4 col-6">
+							<a href="#page8"><button class="btn btn-outline-primary btn-lg">Text</button></a>
+						</div>
+						<div class="col-md-4 d-none d-sm-block"><img class="img-fluid" src="assets/images/chatbot.png"></div>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">7/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Eighth Section -->
+		<div class="section sec-8" data-anchor="page8" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page7"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page9"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
+						<h1>What's the level of AI to be integrated?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-8 col-xs-6 color-2">
+						<input id="range_09" type="text">
+					</div>
+					<div class=" col-md-4"><img class="img-fluid d-none d-sm-block" src="assets/images/chatbot.png"></div>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">8/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Ninth Section -->
+		<div class="section sec-9" data-anchor="page9" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page8"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page10"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>Collect payment from bot?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-4 col-6">
+							<a href="#page10"><button class="btn btn-outline-primary btn-lg">Yes</button></a>
+						</div>
+						<div class="col-md-4 col-6">
+							<a href="#page10"><button class="btn btn-outline-primary btn-lg">No</button></a>
+						</div>
+						<div class="col-md-4 d-none d-sm-block"><img class="img-fluid" src="assets/images/chatbot.png"></div>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">9/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Tenth Section -->
+		<div class="section sec-10" data-anchor="page10" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-6">
+						<a href="#page9"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<h1>Do you want your bot to implement API?</h1>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+					</div>
+				</div><br>
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-4 col-6">
+							<a href="#cost"><button class="btn btn-outline-primary btn-lg">Yes</button></a>
+						</div>
+						<div class="col-md-4 col-6">
+							<a href="#cost"><button class="btn btn-outline-primary btn-lg">No</button></a>
+						</div>
+						<div class="col-md-4 d-none d-sm-block"><img class="img-fluid" src="assets/images/chatbot.png"></div>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 30px">
+					<div class="col-md-12 col-12">
+						<p class="lead">10/10</p>
+					</div>
+				</div>
+				<div class="row text-center" style="margin-top: 10px">
+					<div class="col-md-12 col-12"><img class="img-fluid d-xl-none" height="100" src="assets/images/bothook.png" width="100"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Cost Section -->
+		<div class="section" data-anchor="cost" style="background-color:white">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-12">
+						<a href="#ourbots"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12 col-sm-12 text-center">
+						<h1>The estimated cost your chatbot is</h1>
+						<hr>
+						<br>
+						<h1>$3200 - $3500</h1><br>
+						<!-- Button trigger modal -->
+						 <button class="btn btn-lg btn-outline-primary" data-target="#exampleModal" data-toggle="modal" type="button">Get Exact Quotation</button><br>
+						<br>
+						<p class="lead">Find us on <img height="auto" src="assets/images/fiverr.png" width="50"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Our Bots Section -->
+		<div class="section" data-anchor="ourbots" style="background-color:white">
+			<div class="pp-scrollable">
+				<div class="container">
+					<div class="row text-center">
+						<div class="col-md-12 col-12">
+							<h1>Our Other Awesome Chatbots</h1>
+							<hr>
+						</div>
+					</div><br>
+					<div class="row text-center">
+						<div class="col-md-4 col-12">
+							<img height="auto" src="assets/images/chanun.jpg" width="150">
+							<h4>Chanun Bot</h4>
+							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p>
+						</div>
+						<div class="col-md-4 col-12">
+							<img height="auto" src="assets/images/ace.jpeg" width="150">
+							<h4>Ace2Three Bot</h4>
+							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p>
+						</div>
+						<div class="col-md-4 col-12">
+							<img height="auto" src="assets/images/icc.jpeg" width="150">
+							<h4>ICC Bot</h4>
+							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquetdjsjdbsjfbasajfbafbjsfbjsb.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<!-- Modal -->
+		<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" role="dialog" tabindex="-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Fill Your Details</h5><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						
+						<!--[if lte IE 8]>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+						<![endif]-->
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+						  hbspt.forms.create({ 
+						    css: '',
+						    portalId: '3926567',
+						    formId: '8c2710e1-eef2-4289-b04a-cb5be50b3173'
+						  });
+						</script>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.js">
+	</script> 
+	<script src="https://rawgit.com/M-O-Z-G/ion.rangeSlider/global/js/ion.rangeSlider.min.js">
+	</script> 
+	<script src="assets/js/image-select.js">
+	</script> 
+	<script src="assets/js/rangeslider.js">
+	</script> 
+	<script src="assets/js/pagepiling.js">
+	</script>
+	<!-- Switch images script -->
+ 	<script type="text/javascript">
+  		function swapImage(id,primary,secondary) {
+    		src=document.getElementById(id).src;
+    		if (src.match(primary)) {
+      		document.getElementById(id).src=secondary;
+    		} else {
+      		document.getElementById(id).src=primary;
+    	}
+  	}
+
+ </script>
+
+</body>
+</html>
