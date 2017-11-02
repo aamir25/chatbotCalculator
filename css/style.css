@@ -1,0 +1,116 @@
+.white-background {
+	background-color: white;
+}
+
+.landing-page {
+	background-color: #2196f3;
+	 margin-top: -38px;
+}
+
+.landing-footer {
+	margin-bottom: -38px;
+}
+
+.start-btn {
+	 padding: 10px 100px 10px 100px;
+}
+
+.btn-outline-light:hover{
+    color: black !important;
+}
+
+.height {
+	height: 140px !important;
+}
+
+.irs-single {
+	font-size: 15px;
+}
+
+#pp-nav {
+    margin: 0 auto !important;
+    text-align: center;
+    left:0;
+    right: 0;
+    top: auto !important;
+    bottom: 17px;
+    display: inline-block;
+}
+
+#pp-nav li, .pp-slidesNav li {
+    display:inline-block;
+}
+
+h3 {
+	font-weight: lighter !important;
+    color: #64b5f6 !important;
+}
+h4 {
+    font-weight: lighter !important;
+}
+hr {
+	width: 20% !important;
+	margin: 15px auto !important;
+	height: 2px !important;
+	background-color: #64b5f6 !important;
+}
+.color-2 .irs-bar,
+.color-2 .irs-bar-edge,
+.color-2 .irs-single {
+    background: #64b5f6;
+
+}
+.color-2 .irs-slider {
+    color: #64b5f6;
+
+}
+
+.irs-slider {
+    width: 15px;
+    height: 18px;
+    top: 22px;
+    background-position: 0 -120px;
+    border: 1px solid #2196f3 ;
+    background: #fff;
+}
+
+.irs-single::after {
+    border-top-color: #64b5f6 !important;
+    margin-left: 2px;
+}
+.check {
+    opacity:0.4;	
+}
+
+.white {
+	color: white;
+}
+
+.hs-form-required {
+    visibility: hidden !important;
+}
+
+.hs-input {
+	width: 320px !important;
+	margin-top: 0px !important;
+	border: 2px solid #eeeeee !important;
+}
+
+.hs-button {
+	margin-top: 10px !important;
+	background-color: white !important;
+	border: 1px solid #2196f3  !important;
+	color: #2196f3 !important;
+	border-radius: 5px !important;
+	width: 100px !important;
+	height: 40px !important; 
+}
+
+.hs-button:hover {
+	background-color: #2196f3 !important;
+	color: white !important;
+}
+
+.hs_email {
+	margin-top: 20px !important;
+}

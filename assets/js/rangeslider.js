@@ -16,3 +16,4 @@ $("#range_09").ionRangeSlider({
     values: ["Basic - 1","Basic - 2","Basic - 3","Standard - 1","Standard - 2","Standard - 3","Advanced - 1","Advanced - 2","Advanced - 3"]
     
 });
+
