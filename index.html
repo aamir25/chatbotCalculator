@@ -10,6 +10,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
 	</script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js">
 	</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js">
@@ -18,19 +19,19 @@
 <body class="white-background">
 	<div id="pagepiling">
 		<!-- TOP BRAND -->
-		<div class="container">
-			<a href="http://www.bothook.com"><img class="img-fluid float-left d-none d-sm-block" height="100" src="assets/images/bothook.png" width="100"></a>
-			<h3 class="text-center">Chatbot Cost Calculator</h3>
+		<div class="container" style="position: static;">
+			<a href="http://www.bothook.com"><img class="img-fluid float-left d-none d-sm-block" height="100" src="assets/images/bothook.png" width="100"  style="padding-top: 3%;"></a>
+			<h3 class="text-center" style="padding-top: 3%;">Chatbot Cost Calculator</h3>
 		</div>
 		<!-- LANDING PAGE -->
-		<div class="section landing-page" data-anchor="landing">
-			<div class="container" style="margin-top: 0px">
+		<div class="section landing-page" data-anchor="landing" id="elem" style="margin-top: -75px; padding-bottom: 700px">
+			<div class="container">
 				<div class="row">
-					<div class="col-md-6 col-12" style="margin-top: 50px; margin-bottom: 150px">
+					<div class="col-md-6 col-12" style="margin-top: 50px;">
 						<h1 class="text-uppercase white">ChatBot Calculator</h1>
-						<h4 class="text-uppercase white">The Tagline of this awesome site</h4>
+						<h4 class="text-uppercase white">Find out how much it cost to build a chatbot</h4>
 					</div><br>
-					<div class="col-md-6 col-12"><img class="img-fluid d-none d-sm-block" src="assets/images/bot.png"></div>
+					<div class="col-md-6"><img class="img-fluid" src="assets/images/bot.png"></div>
 				</div>
 				<div class="row">
 					<div class="col-md-4 d-none d-sm-block float-right">
@@ -47,15 +48,18 @@
 		<div class="section sec-1 white-background" data-anchor="page1">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 col-12">
+					<div class="col-md-6 col-6">
 						<a href="#landing"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
+					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page2"><button id="page1_next" class="btn btn-outline-primary btn-lg float-right" disabled>&#62;</button></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12 col-sm-12 text-center">
 						<h1>Choose the platforms</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Chatbots can be built on wide variety of platforms. The cool part about building a chatbot on an already popular platform is the less aqiuistion cost. Deploy your chatbot where your audience are already active or deploy it independently to take control.</p><br>
 					</div>
 				</div>
 				<div class="row text-center">
@@ -72,11 +76,12 @@
 				<br>
 				<div class="row text-center">
 					<div class="col-md-4 col-4">
-						<img class="img-fluid" src="assets/images/wechat.png"></div>
+						<img class="img-fluid" height="80" width="210" id="webPic" src="assets/images/www.png" onclick="swapImage('webPic', 'assets/images/www.png', 'assets/images/www-active.png')"">
+					</div>
 					<div class="col-md-4 col-4">
-						<img class="img-fluid" id="slackPic" src="assets/images/slack-inactive.png" onclick="swapImage('slackPic','assets/images/slack-inactive.png','assets/images/slack-active.png')"></div>
+						<img class="img-fluid " id="slackPic" src="assets/images/slack-inactive.png" onclick="swapImage('slackPic','assets/images/slack-inactive.png','assets/images/slack-active.png')"></div>
 					<div class="col-md-4 col-4">
-						<img class="img-fluid" id="alexaPic" src="assets/images/alexa-inactive.png" onclick="swapImage('alexaPic','assets/images/alexa-inactive.png','assets/images/alexa-active.png')"></div>
+						<img class="img-fluid " id="alexaPic" src="assets/images/alexa-inactive.png" onclick="swapImage('alexaPic','assets/images/alexa-inactive.png','assets/images/alexa-active.png')"></div>
 				</div>
 				<div class="row text-center">
 					<div class="col-md-12 col-12">
@@ -98,7 +103,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>Choose Bot Builder</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Chatbots can also be built by various Bot Builder. The two most popular bot builder are Chatfuel and Manychat. Both of them have their own speicial features. You can go for a custom built from the scratch.</p><br>
 					</div>
 				</div><br>
 				<div class="row text-center" style="margin-top: -50px">
@@ -132,7 +137,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>Do you want integration in your bot?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Integration in a bot allows to take advantage of a third party solutions to do different tasks. For eg: You can integrate with HubSpot. If someone leaves an email on your chatbot, that information can be sent over HubSpot.</p><br>
 					</div>
 				</div><br>
 				<div class="container">
@@ -165,7 +170,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>Do you want users to login from chatbot?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>You can enable users to login on your chatbot. Give access depending on the scope of user permission.</p><br>
 					</div>
 				</div><br>
 				<div class="container">
@@ -198,7 +203,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>Will you be using database?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Allow your bot to store important key values for better understanding.</p><br>
 					</div>
 				</div><br>
 				<div class="container">
@@ -226,12 +231,15 @@
 					<div class="col-md-6 col-6">
 						<a href="#page5"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
 					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page7"><button class="btn btn-outline-primary btn-lg float-right" >&#62;</button></a>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>What's the level of dashboard do you want?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Dashboard can give the opportunity to gain insights that help perform the chatbot better. Depending on the complexity, it can provide an easy to understand, objective view of current performance and can effectively serve as a foundation for further dialogue.</p><br>
 					</div>
 				</div><br>
 				<div class="col-md-12 col-xs-6 color-2">
@@ -256,7 +264,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>What kind of bot?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Bots comes in different shapes and sizes. But there are two most prominent types of bot out in the market.</p><br>
 					</div>
 				</div><br>
 				<div class="container">
@@ -284,12 +292,15 @@
 					<div class="col-md-6 col-6">
 						<a href="#page7"><button class="btn btn-outline-primary btn-lg float-left">&lt;</button></a>
 					</div>
+					<div class="col-md-6 col-6">
+						<a href="#page9"><button class="btn btn-outline-primary btn-lg float-right" >&#62;</button></a>
+					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
 						<h1>What's the level of AI to be integrated?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Adding AI to your bot lifts it to another level. Bot can understand the meaning of words in different combinations, ask questions to create context and intent, and actually do something for users.</p><br>
 					</div>
 				</div>
 				<div class="row">
@@ -317,7 +328,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>Collect payment from bot?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>If you plan to sell something through chatbot then collecting payment is the most important feature to have.</p><br>
 					</div>
 				</div><br>
 				<div class="container">
@@ -350,7 +361,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 						<h1>Do you want your bot to implement API?</h1>
 						<hr>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p><br>
+						<p>Fetch third-party service API. There are thousands of services who keep their API open. In fact, you can have your own API created for other developers to take advantage of it.</p><br>
 					</div>
 				</div><br>
 				<div class="container">
@@ -373,7 +384,7 @@
 		</div>
 		<!-- Cost Section -->
 		<div class="section white-background" data-anchor="cost">
-			<div class="container">
+			<div class="container" style="margin-top: -100px">
 				<div class="row">
 					<div class="col-md-12 col-12">
 						<a href="#ourbots"><button class="btn btn-outline-primary btn-lg float-right">&gt;</button></a>
@@ -388,7 +399,7 @@
 						<!-- Button trigger modal -->
 						 <button class="btn btn-lg btn-outline-primary" data-target="#exampleModal" data-toggle="modal" type="button">Get Exact Quotation</button><br>
 						<br>
-						<p class="lead">Find us on <img height="auto" src="assets/images/fiverr.png" width="50"></p>
+						<p class="lead">Find us on <a href="https://www.fiverr.com/sharjeelsidd/create-a-chatbot-with-an-easy-admin-panel-to-manage" target="_blank"><img height="auto" src="assets/images/fiverr.png" width="50"></a></p>
 					</div>
 				</div>
 			</div>
@@ -406,18 +417,18 @@
 					<div class="row text-center">
 						<div class="col-md-4 col-12">
 							<img height="auto" src="assets/images/chanun.jpg" width="150">
-							<h4>Chanun Bot</h4>
-							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p>
+							<a href="https://m.me/chanunapp" target="_blank"><h4>Chanun Bot</h4></a>
+							<p class="">Chanun is a chatbot that runs on Facebook Messenger. With Chanun, you can easily chat with your friends without revealing your identity. Confess, Share Secrets or Simply Confuse them on who you are. It's the easiest and awesome way to gain insight on what's happening in your friend's life.</p>
 						</div>
 						<div class="col-md-4 col-12">
 							<img height="auto" src="assets/images/ace.jpeg" width="150">
-							<h4>Ace2Three Bot</h4>
-							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquet.</p>
+							<a href="http://m.me/722040677957292" target="_blank"><h4>Ace2Three Bot</h4></a>
+							<p class="">Test your Rummy skills and compete against the best Rummy players in India. Discover tourneys based on your preference to compete and win big prizes!</p>
 						</div>
 						<div class="col-md-4 col-12">
-							<img height="auto" src="assets/images/icc.jpeg" width="150">
-							<h4>ICC Bot</h4>
-							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin viverra risus nec erat semper, et eleifend libero suscipit. Ut egestas eros elit, ac dictum turpis egestas eu. Vestibulum mattis urna at massa tristique, a tempor nunc aliquetdjsjdbsjfbasajfbafbjsfbjsb.</p>
+							<img height="auto" src="assets/images/exbot-logo.png" width="150">
+							<a href="http://m.me/exbotB" target="_blank"><h4>EX Bot</h4></a>
+							<p class="">Exbot is a trading platform based on a chatbot where you can exchange bitcoins for a fiat currency and it provides wallet services of utilities bill payments all within the chatbot</p>
 						</div>
 					</div>
 				</div>
@@ -425,26 +436,81 @@
 		</div>
 	</div>
 
+		<!-- MODAL -->
+		<div class="container">
+		<!-- Modal -->
+		<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" role="dialog" tabindex="-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Fill Your Details</h5><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						
+						<!--[if lte IE 8]>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+						<![endif]-->
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+						  hbspt.forms.create({ 
+						    css: '',
+						    portalId: '3926567',
+						    formId: '8c2710e1-eef2-4289-b04a-cb5be50b3173'
+						  });
+						</script>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- MODAL -->
+		<div class="container">
+		<!-- Modal -->
+		<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="exampleModal" role="dialog" tabindex="-1">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Fill Your Details</h5><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+					</div>
+					<div class="modal-body">
+						
+						<!--[if lte IE 8]>
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+						<![endif]-->
+						<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+						<script>
+						  hbspt.forms.create({ 
+						    css: '',
+						    portalId: '3926567',
+						    formId: '8c2710e1-eef2-4289-b04a-cb5be50b3173'
+						  });
+						</script>
+
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-primary" data-dismiss="modal" type="button">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/pagePiling.js/1.5.4/jquery.pagepiling.js">
-	</script> 
+	</script>
 	<script src="https://rawgit.com/M-O-Z-G/ion.rangeSlider/global/js/ion.rangeSlider.min.js">
-	</script> 
+	</script>
 	<script src="assets/js/image-select.js">
-	</script> 
+	</script>
 	<script src="assets/js/rangeslider.js">
-	</script> 
+	</script>
 	<script src="assets/js/pagepiling.js">
+	</script>
+	<script src="assets/js/logic.js">
 	</script>
  	<!-- Switch images script -->
  	<script type="text/javascript">
-  		function swapImage(id,primary,secondary) {
-    		src=document.getElementById(id).src;
-    		if (src.match(primary)) {
-      		document.getElementById(id).src=secondary;
-    		} else {
-      		document.getElementById(id).src=primary;
-    	}
-  	}
+
  </script>
 </body>
 </html>
